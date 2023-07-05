@@ -63,7 +63,7 @@ include "config.php";
          while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
         if($count>=8) break;
             $imgSrc = $row["image_url"]; // Đường dẫn ảnh từ cột "image" trong cơ sở dữ liệu
-            $name = $row["description"]; // Tên sản phẩm từ cột "name" trong cơ sở dữ liệu
+            $name = $row["name"]; // Tên sản phẩm từ cột "name" trong cơ sở dữ liệu
             $price = $row["price"]; // Giá sản phẩm từ cột "price" trong cơ sở dữ liệu
         $count++;
          ?>

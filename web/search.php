@@ -70,7 +70,7 @@ include "config.php";
                 $price = $row["price"];
                 $count++;
             ?>
-             <a href="product.php?id=<?php echo $row['product_id']; ?>">
+            <a href="product.php?id=<?php echo $row['product_id']; ?>">
             <div class="card">
                 <img src="<?php echo $imgSrc; ?>" alt="poster">
                 <div class="skin">
@@ -92,7 +92,7 @@ include "config.php";
         }
         sqlsrv_close($conn);
     ?>
-            <div id="footer">
+    <div id="footer">
             <div class="footer-title">
                 MOSI
             </div>
@@ -114,7 +114,6 @@ include "config.php";
                     <div><a href="">Blogs</a></div>
                     <div><a href="">Hỏi đáp - FAGs</a></div>
                     <div><a href="">Chăm sóc khách hàng</a></div>
-
                 </div>
                 <div class="recruitment">
                     <div><a href="">Tuyển dụng</a></div>
@@ -146,11 +145,9 @@ include "config.php";
                             9/71/17/4 Vân Canh, Hoài Đức, HN
                          </div>
                     </div>
-                    
-                    
                 </div>
             </div>
-        </div>
+    </div>
 </div>
 </body>
 </html>

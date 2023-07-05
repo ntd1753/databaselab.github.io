@@ -5,7 +5,7 @@ function OpenConnection()
     {
         $serverName = "LAPTOP-4E0TA2GU";
        $connectionOptions = array(
-    "Database" => "ClothingStoreDB",
+    "Database" => "ClothingStore",
     "CharacterSet" => "UTF-8"
 );
 
