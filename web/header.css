@@ -113,3 +113,6 @@ bottom: 5.06%;
     margin: 30px 2% 0;
 
 }
+#header > a{
+  color: black;
+}
