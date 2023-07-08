@@ -16,7 +16,7 @@ body {
 
 i {
     font-size: 33px;
-
+}
 
 
 #banner {
@@ -99,7 +99,9 @@ top: -10px;
     justify-content: space-between;
     
 }
-
+.listcard > a {
+    color: #000000;
+}
 .card {
     /* flex-basis: 22%; */
     margin: 0px -14px 100px 52px;
@@ -261,109 +263,3 @@ top: -10px;
     text-align: center;
     color: #FFFFFF;
 } 
-#footer {
-    height: 431px;
-    background: #1C1B1B;
-    color: #FFFFFF;
-}
-.footer-title {
-    width: 100%;
-    height: 48px;
-    margin-top: 51px;
-    margin-bottom: 26px;
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.line {
-    width: 93.7%;
-    height: 0px;
-    border: 1px solid rgba(254, 254, 254, 0.16);
-    margin: auto;
-}
-.footer-sub {
-    display: flex;
-    margin-top: 45px;
-    margin-left: 186px;
-    margin-bottom: 29px;
-}
-.footer-sub > div {
-    width: 233px;
-    height: 152px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    margin-right: 101px;
-}
-.footer-sub > div> div {
-    
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-}
-a {
-    text-decoration: none;
-    color: #FFFFFF;
-}
-.footer-sub .recruitment {
-    width: 200px;
-    height: 91px;
-}
-
-.footer-sub .contact {
-    width: 254px;
-    height: 224px;
-    
-}
-.footer-sub >.contact > .send {
-    width: 170px;
-    height: 44px;
-    background: #212121;
-    border: 0.5px solid #FFFFFF;
-    border-radius: 7px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: -120px;
-}
-.send .title-contact {
-    width: 93px;
-    height: 18px;
-    margin-top: 8px;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    
-}
-.send-sub {
-    width: 144px;
-    height: 10px;
-    font-weight: 500;
-    font-size: 8px;
-    line-height: 10px;
-    display: flex;
-    align-items: flex-end;
-    color: #FFFFFF;
-}
-
-.contact-inf {
-    display: flex;
-}
-.contact-inf > div {
-    width: 250px;
-    height: 36px;
-    text-align: start;
-    font-size: 14px;
-    line-height: 17px;
-}
-.contact-inf > img {
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    margin-right: 9px;
-}

@@ -81,9 +81,49 @@ if (isset($_POST['selected_size'])) {
                     <input type="number" id="quantity" name="quantity" min="1" value="1" max="<?php echo $max_quantity; ?>" class="quantity-input">
                 </div>
             </div>
-            <button type="submit">Thêm vào giỏ hàng</button>
+            <button type="submit" name="add_to_cart">Thêm vào giỏ hàng</button>
         </div>
 </div>
+<div class="RELATED-PRODUCTS">
+    
+</div>
+
+<?php
+session_start();
+
+// Kiểm tra xem giỏ hàng đã được khởi tạo hay chưa
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = array();
+}
+
+// Xử lý thêm vào giỏ hàng khi người dùng ấn nút "Thêm vào giỏ hàng"
+if (isset($_POST['add_to_cart'])) {
+    $selected_size = $_POST['selected_size'];
+    $quantity = $_POST['quantity'];
+
+    // Cập nhật giỏ hàng
+    addToCart($selected_size, $quantity);
+
+    // Chuyển hướng người dùng đến trang giỏ hàng
+    header('Location: cart.php');
+    exit;
+}
+
+// Thêm sản phẩm vào giỏ hàng
+function addToCart($selected_size, $quantity) {
+    // Kiểm tra xem sản phẩm đã có trong giỏ hàng hay chưa
+    $product_id = $selected_size; // Sử dụng selected_size làm ID sản phẩm (có thể thay đổi)
+    if (isset($_SESSION['cart'][$product_id])) {
+        // Nếu đã có sản phẩm trong giỏ hàng, cập nhật số lượng
+        $_SESSION['cart'][$product_id] += $quantity;
+    } else {
+        // Nếu chưa có sản phẩm trong giỏ hàng, thêm sản phẩm mới
+        $_SESSION['cart'][$product_id] = $quantity;
+    }
+}
+?>
+
+
 <?php 
         include "./footer.php";
         ?>
