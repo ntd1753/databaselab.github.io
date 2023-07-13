@@ -1,3 +1,9 @@
+<style>
+    <?php 
+        include "header.css";
+    ?>
+</style>
+
 <div id="header">
         <div class="nav-left">
             <div><i class="fa-solid fa-bars" style="color: #000000;"></i>
@@ -14,6 +20,6 @@
         <a href="index.php" style="color: #000000;"><div class="header-mid">MOSI</div></a>
         <div class="nav-right">
             <div class="sub-nav">My MASI</div>
-            <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>
+            <a href="cart.php"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></a>
         </div>
     </div>

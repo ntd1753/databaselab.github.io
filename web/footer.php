@@ -49,7 +49,7 @@
                         <img src="img/image 12.png">
                         <div>
                             <b>Địa chỉ</b><br>
-                            9/71/17/4 Vân Canh, Hoài Đức, HN
+                            1/12/23/4 Đại TỪ, Hoài Đức, HN
                          </div>
                     </div>
                     
@@ -57,3 +57,9 @@
                 </div>
             </div>
         </div>
+
+<style>
+    <?php 
+    include "footer.css";
+    ?>
+</style>

@@ -1,0 +1,64 @@
+.page-title{
+    margin:  40px 0;
+    font-size: 24px;
+    line-height: 30px;
+    width: 115px;
+    box-shadow: 0 -5px #d8d8d8 inset;
+}
+table {
+    margin: 0;
+    border: 1px solid black;
+    border-collapse: collapse; 
+    border-spacing: 1;
+    table-layout: auto;
+    width: 85%;
+}
+th {
+    text-align: center;
+}
+tr img {
+    width: 100px;
+    height: 100px;
+}
+td {
+    text-align: center;
+    height: 115px;
+}
+thead,th,tr,td {border: 1px solid black;}
+input{
+    width: 50px;
+    height: 20px;
+}
+.content {
+    display: flex;
+}
+.suggest{
+    width: 20%;
+}
+.cart-container{
+    width: 80%;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+.add div {
+    width: 14px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 15px;
+    font-weight: bolder;
+    background-color: white;
+}
+.quatity{
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+td > div {
+    width: 30px;
+    background-color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}

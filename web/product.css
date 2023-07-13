@@ -54,3 +54,14 @@ color: gray;
 .quantity > .qty-text {
     margin-right: 10px;
 }
+.themgiohang {
+    color: white;
+    background-color: black;
+    width: 150px;
+    height: 45px;
+}
+button {
+    cursor: pointer;
+}
+
+

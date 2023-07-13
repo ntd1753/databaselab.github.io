@@ -14,7 +14,7 @@ if ($stmt === false) {
 $product = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
 
 // Lấy dữ liệu từ bảng Size_Product và số lượng sản phẩm có size trong kho
-$query ="SELECT size, SoLuongTrongKho FROM Size_Product WHERE product_id = ?";
+$query ="SELECT size, SoLuongTrongKho,size_id FROM Size_Product WHERE product_id = ?";
 $stmt = sqlsrv_query($conn, $query, $params);
 if ($stmt === false) {
     die(print_r(sqlsrv_errors(), true));
@@ -29,6 +29,7 @@ if (isset($_POST['selected_size'])) {
     $selected_size = $_POST['selected_size'];
     foreach ($sizes as $size) {
         if ($size['size'] == $selected_size) {
+            $size_id= $size['size_id'];
             $max_quantity = $size['SoLuongTrongKho'];
             break;
         }
@@ -49,15 +50,19 @@ if (isset($_POST['selected_size'])) {
     <link rel="stylesheet" href="./product.css">
     <!-- awesome icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-<body>
+</head>
+<style>
+    <?php include "product.css"; ?>
+</style>
+    <body>
+        <div id="main">
         <?php
             include"./head.php";
-        ?>    
+        ?>    </div>
 <div class="product">
         <div class="product-img"><img src="<?php echo $product['image_url']; ?>"></div>
         <div class="product-des">
@@ -65,67 +70,39 @@ if (isset($_POST['selected_size'])) {
             <div class="price"><?php echo $product['price']; ?>đ</div>
             <div class="line"></div>
             <div class="size">Size:</div>
-            <form method="post" action="">
-                <?php foreach ($sizes as $size): ?>
-                    <span>
-                        <button type="submit" name="selected_size" value="<?php echo $size['size']; ?>" class="size-sub">
-                            <?php echo $size['size']; ?>
-                        </button>
-                    </span>
-                <?php endforeach; ?>
-            </form>
-
-            <div class="quantity">
-                <span class="qty-text">SL:</span>
-                <div class="control">
-                    <input type="number" id="quantity" name="quantity" min="1" value="1" max="<?php echo $max_quantity; ?>" class="quantity-input">
-                </div>
+    <form action="" method="post">
+        <?php foreach ($sizes as $size): ?>
+            <span>
+                <button type="submit" name="selected_size" value="<?php echo $size['size']; ?>" class="size-sub" >
+                    <?php echo $size['size']; ?>
+                </button>
+            </span>
+        <?php endforeach; ?>
+    </form>       
+    <form action="addtocart.php?size_id=<?php echo  $size_id ?>" method="POST">
+     
+        
+        <div class="quantity">
+            <span class="qty-text">SL:</span>
+            <div class="control">
+                <input type="number" id="quantity" name="quantity" min="1" value="1" max="<?php echo $max_quantity; ?>" class="quantity-input">
             </div>
-            <button type="submit" name="add_to_cart">Thêm vào giỏ hàng</button>
+        </div>
+        <input type="submit" name="themgiohang" class="themgiohang" value="Thêm vào giỏ hàng ">
+            
+        </input>
+
+    </form>
         </div>
 </div>
 <div class="RELATED-PRODUCTS">
     
 </div>
 
-<?php
-session_start();
-
-// Kiểm tra xem giỏ hàng đã được khởi tạo hay chưa
-if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = array();
-}
-
-// Xử lý thêm vào giỏ hàng khi người dùng ấn nút "Thêm vào giỏ hàng"
-if (isset($_POST['add_to_cart'])) {
-    $selected_size = $_POST['selected_size'];
-    $quantity = $_POST['quantity'];
-
-    // Cập nhật giỏ hàng
-    addToCart($selected_size, $quantity);
-
-    // Chuyển hướng người dùng đến trang giỏ hàng
-    header('Location: cart.php');
-    exit;
-}
-
-// Thêm sản phẩm vào giỏ hàng
-function addToCart($selected_size, $quantity) {
-    // Kiểm tra xem sản phẩm đã có trong giỏ hàng hay chưa
-    $product_id = $selected_size; // Sử dụng selected_size làm ID sản phẩm (có thể thay đổi)
-    if (isset($_SESSION['cart'][$product_id])) {
-        // Nếu đã có sản phẩm trong giỏ hàng, cập nhật số lượng
-        $_SESSION['cart'][$product_id] += $quantity;
-    } else {
-        // Nếu chưa có sản phẩm trong giỏ hàng, thêm sản phẩm mới
-        $_SESSION['cart'][$product_id] = $quantity;
-    }
-}
-?>
-
 
 <?php 
         include "./footer.php";
         ?>
+
 </body>
 </html>
