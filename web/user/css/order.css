@@ -1,0 +1,73 @@
+#title-1{
+    margin-top:  40px;
+    font-size: 24px;
+    line-height: 30px;
+    width: 150px;
+    box-shadow: 0 -5px #d8d8d8 inset;
+}
+.content{
+    display: flex;
+}
+.suggest{
+    width: 20%;
+}
+.container{
+    width: 80%;
+}
+form {
+    width: 55%;
+}
+.container>form>div>input {
+    width: 60%;
+    height: 32px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    font-family: sans-serif;
+}
+label {
+    font-size: 16px;
+}
+h4 {
+    margin: 10px 0;
+}
+table {
+    margin: 0;
+    border: 1px solid black;
+    border-collapse: collapse; 
+    border-spacing: 1;
+    table-layout: auto;
+    width: 120%;
+    font-size: 16px;
+}
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    height: 115px;
+}
+thead,th,tr,td {border: 1px solid black;}
+.pay-ment {
+    margin: 20px 0;
+    background-color: #dfdcde;
+    height: 180px;
+    width: 120%;
+    font-size: 16px;
+}
+.method-pay , .method-sub {
+    margin: 20px 10px;
+}
+.pay-ment > .submittt {
+    background-color: #999999;
+    color: white;
+    font-weight: 700;
+    margin: 20px 30px;
+    width: 250px;
+    height: 40px;
+}
+.submittt:hover {
+    cursor: pointer;
+    color: black;
+    background-color: #ffffff;
+}

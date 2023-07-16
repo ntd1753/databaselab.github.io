@@ -22,29 +22,26 @@ i {
 #banner {
 position: relative;
 margin-top: 23px;
-margin-left: 3%;
 }
 #banner > img {
     width: 94.5%;
     height: 760px;
+    margin-left: 3%;;
 }
 
 #product {
     position: relative;
     width: 98.5%;
-    height: 1500px;
+    height: 1300px;
 }
 .nav-product {
 position: absolute;
-width:98.4%;
+
 display: flex;
 font-weight: 700;
 font-size: 23px;
 line-height: 28px;
-
-display: flex;
 align-items: center;
-line-height: 28px;
 margin-left: 3%;
 margin-top: 92px;
 }
@@ -97,7 +94,7 @@ top: -10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+    margin-left: 3%;
 }
 
 .card {
@@ -105,7 +102,7 @@ top: -10px;
     flex-basis: 20%;
     margin: 0px 0% 100px 2%;
     width: 380px;
-    height: 602px;
+    height: 444px;
 }
 .skin {
     display: flex;
@@ -136,7 +133,7 @@ top: -10px;
 }
 .list-bonus {
     position: absolute;
-    top: 1434px;
+    top: 1237px;
 }
 .list-bonus, .list-bonus-new,.design {
     width:331px;
@@ -219,15 +216,17 @@ top: -10px;
     margin-top: 107px;
     margin-bottom: 136px;
 }
-
+.content2-left{
+    width: 838px;
+}
 .content2-left > .title-content {
-    margin-right: 47px;
+    margin-right: 7px;
     
 }
 .content2-left > .sub-content {
     position: relative;
     margin-left: 3%;
-    margin-right: 89px;
+    margin-right: 49px;
     
 
 }
@@ -238,18 +237,18 @@ top: -10px;
 }
 .content2-right{
     position: relative;
-    width: 890px;
+    width: 850px;
 }
 .content2-right > img{
     position: absolute;
-    width: 890px;
+    width: 850px;
     height:698px;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 .content2-right div {
     position: absolute;
-    width: 890px;
+    width: 850px;
     height:698px;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 5;

@@ -1,8 +1,16 @@
+
 .page-title{
     margin:  40px 0;
     font-size: 24px;
     line-height: 30px;
     width: 115px;
+    box-shadow: 0 -5px #d8d8d8 inset;
+}
+.page-title2{
+    margin:  40px 0;
+    font-size: 24px;
+    line-height: 30px;
+    width: 205px;
     box-shadow: 0 -5px #d8d8d8 inset;
 }
 table {
@@ -12,6 +20,7 @@ table {
     border-spacing: 1;
     table-layout: auto;
     width: 85%;
+    font-size: 16px;
 }
 th {
     text-align: center;
@@ -31,24 +40,30 @@ input{
 }
 .content {
     display: flex;
+    min-height: 500px;
 }
 .suggest{
     width: 20%;
 }
 .cart-container{
     width: 80%;
+
 }
-a {
+.xoa {
     text-decoration: none;
     color: black;
 }
-.add div {
-    width: 14px;
+.xoa:hover{
+    color: blue;
+}
+.add>div {
+    width: 18px;
     text-align: center;
     border: 1px solid black;
     font-size: 15px;
     font-weight: bolder;
-    background-color: white;
+    background-color: white;color: black;
+    height: 20px;
 }
 .quatity{
     border: none;
@@ -61,4 +76,23 @@ td > div {
     background-color: white;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+}
+.tinhtong >tr>th{
+    width: 25%;
+
+}
+.order {
+    margin: 20px 0;
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    float: right;
+    margin-right: 15%;
+}
+.order:hover {
+    cursor: pointer;
+    background-color: #d8d8d8;
+    color: black;
+    
 }

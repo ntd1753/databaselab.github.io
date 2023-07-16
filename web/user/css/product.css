@@ -2,7 +2,7 @@
     width: 70%;
     display: flex;
     margin: 50px auto;
-    height: 650px;
+    height: 430px;
 }
 .product-img {
     width: 30%;
@@ -20,7 +20,7 @@
 font-weight: bold;
 color: gray;
 }
-.line {
+.line-product {
     margin-left: 0px;
     margin-top: 10px;
     border-bottom: 1px solid black;
@@ -48,11 +48,14 @@ color: gray;
     width: 50px;
 }
 .quantity{
-    margin-top: 10px;
-    display: flex;
+    margin: 10px 0;
+    display: block;
 }
 .quantity > .qty-text {
     margin-right: 10px;
+}
+input {
+    width: 62px;
 }
 .themgiohang {
     color: white;
@@ -64,4 +67,53 @@ button {
     cursor: pointer;
 }
 
+.RELATED-PRODUCTS{
+    width: 99%;
+    height: 600px;
+}
+.related-title{
+   
+        font-family: sans-serif;
+       
+        display: flex;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 28px;
+        align-items: center;
+        margin-left: 3%;
+        margin-top: 92px;
+        
+}
+.row {
+    font-family: sans-serif;
+ 
+}
+.listcard {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 2%;
+}
 
+.card {
+    flex-basis: 20%;
+    margin: 0px 0% 100px 2%;
+    width: 380px;
+    height: 444px;
+}
+
+.sub-card {
+    font-size: 20px;
+    line-height: 30px;
+    width: 380px;
+}
+.name {
+    height: 36px;
+    font-weight: 400;
+}
+
+.price-card {
+    height: 29px;
+    font-weight: 700;
+}

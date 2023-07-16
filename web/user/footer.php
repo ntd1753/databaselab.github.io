@@ -60,6 +60,6 @@
 
 <style>
     <?php 
-    include "footer.css";
+    include "../user/css/footer.css";
     ?>
 </style>

@@ -1,6 +1,7 @@
 <style>
     <?php 
-        include "header.css";
+        include "../user/css/header.css";
+        
     ?>
 </style>
 
@@ -11,7 +12,7 @@
             <div id="search-form" class="hidden">
             <form action="search.php" method="POST">
                 <input type="text" name="search" placeholder="Search...">
-                <button type="submit"><img src="img/magnifying-glass.png" alt=""></button>
+                <button type="submit"><img src="./img/magnifying-glass.png" alt=""></button>
             </form>
 
             </div>

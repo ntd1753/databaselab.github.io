@@ -1,5 +1,5 @@
 <?php 
-include "config.php";
+include "../config/config.php";
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ include "config.php";
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 </head>
 <style>
-    <?php include "style.css";?>
+    <?php include "../user/css/style.css";?>
 </style>
 
 
@@ -55,11 +55,7 @@ include "config.php";
          <a href="product.php?product_id=<?php echo $row['product_id']; ?>" style="color: #000000;">
          <div class="card">
          <img src="<?php echo $imgSrc; ?>"  alt="poster">
-         <div class="skin">
-                    <div class="color-skin" style="background-color: #000000;"></div>
-                    <div class="color-skin" style="background-color: #FFFFFF;"></div>
-                    <div class="color-skin" style="background-color: #BFECFF;"></div>
-                </div>
+         
                 <div class="sub-card">
                     <div class="name"><?php echo $name; ?> </div>
                     <div class="price"><?php echo $price; ?>đ</div>
@@ -88,7 +84,7 @@ include "config.php";
     </div>
     <div id="new-product">
         <div class="listname">SẢN PHẨM MỚI</div>
-        <div class="row">
+    <div class="row">
         <div class="listcard">
         <?php 
          $sqldesc = "SELECT *
@@ -120,7 +116,7 @@ include "config.php";
          <?PHP 
              }
              ?> 
-        </div></div>
+    </div></div>
         <div class="list-bonus-new">
             XEM THÊM
         </div>

@@ -1,6 +1,7 @@
 <?php
 session_start();
-include 'config.php';
+include "../config/config.php";
+
 
 // Kiểm tra xem giỏ hàng có tồn tại không
 if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
@@ -34,7 +35,7 @@ if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
 
     <style>
        <?php 
-       include "cart.css";
+       include "./css/cart.css";
        ?>
     </style>
 </head>
@@ -71,7 +72,7 @@ if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
                 <tbody>
                     <?php foreach($cartItems as $cartItem): ?>
                         <tr>
-                        <td><a href="addtocart.php?xoa=<?php echo $cartItem['id']?>">Xoá</a></td>
+                        <td><a href="addtocart.php?xoa=<?php echo $cartItem['id']?>" class="xoa">Xóa</a></td>
                             <td><img src="<?php echo $cartItem['image_url']; ?>" alt=""></td>
                             <td><?php echo $cartItem['name']; ?></td>
                             <td><?php echo $cartItem['size']; ?></td>
@@ -91,10 +92,26 @@ if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
                 </tbody>
              
             </table>
+        <h1 class="page-title2"> CỘNG GIỎ HÀNG</h1>
+        <table class="tinhtong">
+            
+                <tr>
+                    <th>Tạm Tính</th>
+                    <td><?php echo $sum  ?>đ</td>
+                </tr>
+                <tr>
+                    <th>Giao Hàng</th>
+                    <td>GIao Hàng Miễn phí</td>
+                </tr>
+                <tr>
+                    <th>Tổng</th>
+                    <td><?php echo $sum  ?>đ</td>
+                    
+                </tr>
+        </table>
+          
 
-            <p>Tổng tiền: <?php echo $sum  ?></p>
-
-            <a href="checkout.php">Tiến hành thanh toán</a>
+            <a href="order.php"><button class="order">Đặt Hàng</button>  </a>
             
         <?php endif; ?>
         <?php 
@@ -102,6 +119,9 @@ if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
         ?>
         </div>
     </div>
+    <?php 
+    include "footer.php";
+    ?>
     </div>   
 </body>
 </html>
