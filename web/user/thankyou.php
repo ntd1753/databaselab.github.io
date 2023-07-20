@@ -7,7 +7,9 @@ if(isset($_SESSION['order_id'])){
 }else{
     header('Location: index.php');
 }
+
 unset($_SESSION['cart']);
 unset($_SESSION['order_id']);
 ?>
+<br> <a href="index.php" style="font-size: 16px;">về trang chủ</a>
 

@@ -8,13 +8,13 @@
     width: 30%;
 }
 .product-img > img {
-    width: 120%;
+    width: 100%;
 }
 .product-des {
     width: 60%;
     font-weight: 400;
     font-size: 22px;
-    margin-left: 210px;
+    margin-left: 100px;
 }
 .price {
 font-weight: bold;
@@ -92,10 +92,12 @@ button {
     margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+
     margin-left: 2%;
 }
-
+.listcard > a {
+    margin-right: 1%;
+}
 .card {
     flex-basis: 20%;
     margin: 0px 0% 100px 2%;

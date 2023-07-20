@@ -15,7 +15,7 @@
     }
     $insert_customer="INSERT INTO Customers (customer_name, email, address, phone)
     OUTPUT INSERTED.customer_id
-    VALUES ('$customer_name', '$customer_email', '$customer_address', '$customer_phone');";
+    VALUES (N'$customer_name', N'$customer_email', N'$customer_address', '$customer_phone');";
     $query_customer=sqlsrv_query($conn,$insert_customer);
     $row = sqlsrv_fetch_array($query_customer, SQLSRV_FETCH_ASSOC);
     $customer_id=$row['customer_id'] ;

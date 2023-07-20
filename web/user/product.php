@@ -95,7 +95,7 @@ if (isset($_POST['selected_size'])) {
         <div class="quantity">
             <span class="qty-text">SL:</span><br>
             <div class="control">
-                <input type="number" id="quantity" name="quantity" min="1" value="1" max="<?php echo $max_quantity; ?>" class="quantity-input">
+                <input type="number" id="quantity" name="quantity" min="0" value="1" max="<?php echo $max_quantity; ?>" class="quantity-input">
             </div>
         </div>
         <input type="submit" name="themgiohang" class="themgiohang" value="Thêm vào giỏ hàng ">
@@ -135,12 +135,16 @@ if (isset($_POST['selected_size'])) {
              }
              ?> 
     </div></div>
+   
 </div>
-
-
 <?php 
         include "./footer.php";
         ?>
 
 </body>
+<style>
+     .footer-tilte {
+        padding-top: 23px;
+    }
+</style>
 </html>

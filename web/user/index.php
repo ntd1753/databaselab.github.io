@@ -18,6 +18,7 @@ include "../config/config.php";
 </head>
 <style>
     <?php include "../user/css/style.css";?>
+   
 </style>
 
 
@@ -36,7 +37,6 @@ include "../config/config.php";
     <div id="product">
         <div class="nav-product">
             <div>TOÀN BỘ SẢN PHẨM</div>
-            <div id="nav-sort">SẮP XẾP <div>Mới nhất<i class="fa-solid fa-chevron-down fa-2xs" style="color: #000000;"></i></div></div>
         </div>
         <div class="row">
         <div class="listcard">
@@ -102,11 +102,7 @@ include "../config/config.php";
          <a href="product.php?product_id=<?php echo $row['product_id']; ?>" style="color: #000000;">
          <div class="card">
          <img src="<?php echo $imgSrc; ?>"  alt="poster">
-         <div class="skin">
-                    <div class="color-skin" style="background-color: #000000;"></div>
-                    <div class="color-skin" style="background-color: #FFFFFF;"></div>
-                    <div class="color-skin" style="background-color: #BFECFF;"></div>
-                </div>
+       
                 <div class="sub-card">
                     <div class="name"><?php echo $name; ?> </div>
                     <div class="price"><?php echo $price; ?>đ</div>

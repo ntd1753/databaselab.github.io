@@ -30,7 +30,7 @@ include "../config/config.php";
    
         $searchTerm = $_POST['search'];
         // Thực hiện truy vấn cơ sở dữ liệu để tìm kiếm sản phẩm
-        $sql = "SELECT * FROM Products WHERE name LIKE '%$searchTerm%'";
+        $sql = "SELECT * FROM Products WHERE name LIKE N'%$searchTerm%'";
         $result = sqlsrv_query($conn, $sql);
     ?>
     
@@ -42,7 +42,7 @@ include "../config/config.php";
  
     <div class="row">
         
-        <div class="listcard">
+        <div class="listcard" style="justify-content: flex-start;">
             <?php 
             $count = 0;
             while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
@@ -52,8 +52,8 @@ include "../config/config.php";
                 $price = $row["price"];
                 $count++;
             ?>
-            <a href="product.php?product_id=<?php echo $row['product_id']; ?>">
-            <div class="card">
+            <a href="product.php?product_id=<?php echo $row['product_id']; ?>" style="margin-right: 1%;">
+            <div class="card" >
                 <img src="<?php echo $imgSrc; ?>" alt="poster">
                 <div class="skin">
                     <div class="color-skin" style="background-color: #000000;"></div>

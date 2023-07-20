@@ -36,6 +36,7 @@ if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
     <?php 
     include "head.php";
     ?>
+    
     <div class="content">
         <div class="suggest">
 
@@ -58,6 +59,7 @@ if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
     
     <div>
         <h2>Đơn hàng của bạn</h2>
+        
         <table class="items">
             <thead>
                 <th>Sản phẩm</th>
@@ -66,6 +68,7 @@ if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
                 <th>Tạm Tính</th>
             </thead>
             <tbody>
+                
                 <?php foreach($cartItems as $cartItem){ ?>
                     <tr>
                         <td><?php echo $cartItem['name']; ?></td>
@@ -92,11 +95,12 @@ if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])){
              được mô tả trong <a href="#">chính sách riêng tư</a>.
         </div>           
         <button type="submit" name="submit" class="submittt">Thanh Toán</button>
-    </div>     
+    </div>    
     </form>
     </div></div>
     <?php
-    $_SESSION['sum']=$sum;
+    if(isset($_SESSION['sum'])){
+    $_SESSION['sum']=$sum;}
     ?>
     <?php 
         include "footer.php";

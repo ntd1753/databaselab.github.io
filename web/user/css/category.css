@@ -1,0 +1,64 @@
+.row {
+    position: relative;
+    margin-top: 50px;
+    width: 98.4%;
+    min-height: 500px;
+    
+}
+.listcard {
+    margin-top: 0px;
+    top:145px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 3%;
+    
+}
+.listcard > a {
+    text-decoration: none;
+    color: #1C1B1B;
+    margin-right: 1%;
+}
+.card {
+    flex-basis: 20%;
+    margin: 0px 0% 100px 2%;
+    width: 380px;
+    height: 602px;
+
+}
+
+.skin {
+    display: flex;
+}
+.color-skin{
+    box-sizing: border-box;
+    margin-top: 26px;
+    margin-right: 13px;
+    margin-bottom: 21px;
+    width: 37px;
+    height: 27px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+.sub-card {
+    font-size: 20px;
+    line-height: 24px;
+    width: 380px;
+}
+.name {
+    height: 36px;
+    font-weight: 400;
+}
+
+.price {
+    height: 29px;
+    font-weight: 700;
+}
+
+.resultc {
+    font-size: 25px;
+    border-bottom: 1px solid gray;
+    width: 26%;
+    margin: 30px 2% 0;
+}
+
+

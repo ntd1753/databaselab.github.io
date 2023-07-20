@@ -49,7 +49,7 @@
                         <img src="img/image 12.png">
                         <div>
                             <b>Địa chỉ</b><br>
-                            1/12/23/4 Đại TỪ, Hoài Đức, HN
+                            1/12/23/4 Đại Từ, Hoài Đức, HN
                          </div>
                     </div>
                     

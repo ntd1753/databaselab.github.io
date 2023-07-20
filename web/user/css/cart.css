@@ -55,6 +55,7 @@ input{
 }
 .xoa:hover{
     color: blue;
+    text-decoration: line-through;
 }
 .add>div {
     width: 18px;
@@ -72,6 +73,7 @@ input{
     justify-content: center;
 }
 td > div {
+    height: 20px;
     width: 30px;
     background-color: white;
     border-top: 1px solid black;
